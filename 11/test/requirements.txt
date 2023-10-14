@@ -1,0 +1,4 @@
+pyqt-tools
+PyQt5
+matplotlib
+datetime

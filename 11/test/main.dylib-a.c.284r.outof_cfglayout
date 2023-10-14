@@ -1,0 +1,1157 @@
+
+;; Function createStack (createStack, funcdef_no=6, decl_uid=3054, cgraph_uid=7, symbol_order=6)
+
+Reordered sequence:
+ 2 bb 2
+ 3 bb 3
+ 4 bb 4
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])
+        (const_int 0 [0])) "a.c":6:14 74 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) "a.c":7:11 74 {*movdi_internal}
+     (nil))
+(call_insn 7 6 8 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fa9f2ad4800 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "a.c":7:11 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 87)
+        (reg:DI 0 ax)) "a.c":7:11 74 {*movdi_internal}
+     (expr_list:REG_NOALIAS (reg/f:DI 87)
+        (nil)))
+(insn 9 8 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])
+        (reg/f:DI 87)) "a.c":7:11 74 {*movdi_internal}
+     (nil))
+(insn 11 9 12 2 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":11:15 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (mem:DI (plus:DI (reg/f:DI 88)
+                (const_int 8 [0x8])) [4 out_8->size+0 S8 A64])
+        (const_int 10 [0xa])) "a.c":11:15 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":12:27 74 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 89)
+                (const_int 8 [0x8])) [4 out_8->size+0 S8 A64])) "a.c":12:27 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 5 di)
+        (reg:DI 82 [ _1 ])) "a.c":12:17 74 {*movdi_internal}
+     (nil))
+(call_insn 16 15 17 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fa9f2ad4800 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "a.c":12:17 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 17 16 18 2 (set (reg/f:DI 90)
+        (reg:DI 0 ax)) "a.c":12:17 74 {*movdi_internal}
+     (expr_list:REG_NOALIAS (reg/f:DI 90)
+        (nil)))
+(insn 18 17 19 2 (set (reg/f:DI 83 [ _2 ])
+        (reg/f:DI 90)) "a.c":12:17 74 {*movdi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":12:15 74 {*movdi_internal}
+     (nil))
+(insn 20 19 21 2 (set (mem/f:DI (reg/f:DI 91) [3 out_8->data+0 S8 A64])
+        (reg/f:DI 83 [ _2 ])) "a.c":12:15 74 {*movdi_internal}
+     (nil))
+(insn 21 20 22 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":13:12 74 {*movdi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (reg/f:DI 92) [3 out_8->data+0 S8 A64])) "a.c":13:12 74 {*movdi_internal}
+     (nil))
+(insn 23 22 24 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 84 [ _3 ])
+            (const_int 0 [0]))) "a.c":13:8 8 {*cmpdi_ccno_1}
+     (nil))
+(jump_insn 24 23 25 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 29)
+            (pc))) "a.c":13:8 806 {*jcc}
+     (nil)
+ -> 29)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 25 24 26 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 26 25 27 3 (set (reg:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":14:9 74 {*movdi_internal}
+     (nil))
+(insn 27 26 28 3 (set (reg:DI 5 di)
+        (reg:DI 93)) "a.c":14:9 74 {*movdi_internal}
+     (nil))
+(call_insn 28 27 29 3 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":14:9 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+;;              3 (FALLTHRU)
+(code_label 29 28 30 4 2 (nil) [1 uses])
+(note 30 29 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 4 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":17:14 74 {*movdi_internal}
+     (nil))
+(insn 32 31 33 4 (set (mem:DI (plus:DI (reg/f:DI 94)
+                (const_int 16 [0x10])) [4 out_8->top+0 S8 A64])
+        (const_int 0 [0])) "a.c":17:14 74 {*movdi_internal}
+     (nil))
+(insn 33 32 36 4 (set (reg/f:DI 85 [ _14 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 out+0 S8 A64])) "a.c":18:12 74 {*movdi_internal}
+     (nil))
+(insn 36 33 40 4 (set (reg/f:DI 86 [ <retval> ])
+        (reg/f:DI 85 [ _14 ])) "a.c":18:12 74 {*movdi_internal}
+     (nil))
+(insn 40 36 41 4 (set (reg/i:DI 0 ax)
+        (reg/f:DI 86 [ <retval> ])) "a.c":19:1 74 {*movdi_internal}
+     (nil))
+(insn 41 40 0 4 (use (reg/i:DI 0 ax)) "a.c":19:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function deleteStack (deleteStack, funcdef_no=7, decl_uid=3053, cgraph_uid=8, symbol_order=7)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [5 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":21:35 74 {*movdi_internal}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [5 stack+0 S8 A64])) "a.c":22:11 74 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (reg/f:DI 85) [1 *stack_5(D)+0 S8 A64])) "a.c":22:11 74 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (reg/f:DI 82 [ _1 ]) [3 _1->data+0 S8 A64])) "a.c":22:18 74 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "a.c":22:5 74 {*movdi_internal}
+     (nil))
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":22:5 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 2 (set (reg/f:DI 86)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [5 stack+0 S8 A64])) "a.c":23:5 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (reg/f:DI 86) [1 *stack_5(D)+0 S8 A64])) "a.c":23:5 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (reg/f:DI 84 [ _3 ])) "a.c":23:5 74 {*movdi_internal}
+     (nil))
+(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":23:5 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 87)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [5 stack+0 S8 A64])) "a.c":24:12 74 {*movdi_internal}
+     (nil))
+(insn 16 15 19 2 (set (mem/f:DI (reg/f:DI 87) [1 *stack_5(D)+0 S8 A64])
+        (const_int 0 [0])) "a.c":24:12 74 {*movdi_internal}
+     (nil))
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (NEW, RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+(note 19 16 20 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 0 3 (const_int 0 [0]) "a.c":25:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function resize (resize, funcdef_no=8, decl_uid=3056, cgraph_uid=9, symbol_order=8)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":28:29 74 {*movdi_internal}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 88)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":29:17 74 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 88)
+                (const_int 8 [0x8])) [4 stack_8(D)->size+0 S8 A64])) "a.c":29:17 74 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 83 [ _2 ])
+                (plus:DI (reg:DI 82 [ _1 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":29:17 210 {*adddi_1}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":29:17 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (mem:DI (plus:DI (reg/f:DI 89)
+                (const_int 8 [0x8])) [4 stack_8(D)->size+0 S8 A64])
+        (reg:DI 83 [ _2 ])) "a.c":29:17 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":30:45 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 90)
+                (const_int 8 [0x8])) [4 stack_8(D)->size+0 S8 A64])) "a.c":30:45 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":30:32 74 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (reg/f:DI 91) [3 stack_8(D)->data+0 S8 A64])) "a.c":30:32 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 4 si)
+        (reg:DI 84 [ _3 ])) "a.c":30:19 74 {*movdi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 5 di)
+        (reg/f:DI 85 [ _4 ])) "a.c":30:19 74 {*movdi_internal}
+     (nil))
+(call_insn 17 16 18 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("realloc") [flags 0x41]  <function_decl 0x7fa9f2ad7600 realloc>) [0 __builtin_realloc S1 A8])
+            (const_int 0 [0]))) "a.c":30:19 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 18 17 19 2 (set (reg/f:DI 86 [ _5 ])
+        (reg:DI 0 ax)) "a.c":30:19 74 {*movdi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":30:17 74 {*movdi_internal}
+     (nil))
+(insn 20 19 26 2 (set (mem/f:DI (reg/f:DI 92) [3 stack_8(D)->data+0 S8 A64])
+        (reg/f:DI 86 [ _5 ])) "a.c":30:17 74 {*movdi_internal}
+     (nil))
+(insn 26 20 0 2 (const_int 0 [0]) "a.c":34:1 843 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function push (push, funcdef_no=9, decl_uid=3059, cgraph_uid=10, symbol_order=9)
+
+Reordered sequence:
+ 2 bb 2
+ 3 bb 3
+ 4 bb 4
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":36:39 74 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (reg:SI 89)
+        (reg:SI 4 si [ value ])) "a.c":36:39 75 {*movsi_internal}
+     (nil))
+(insn 4 3 5 2 (set (reg:QI 90)
+        (subreg:QI (reg:SI 89) 0)) "a.c":36:39 77 {*movqi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [0 value+0 S1 A32])
+        (reg:QI 90)) "a.c":36:39 77 {*movqi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":37:14 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 16 [0x10])) [4 stack_10(D)->top+0 S8 A64])) "a.c":37:14 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":37:28 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 92)
+                (const_int 8 [0x8])) [4 stack_10(D)->size+0 S8 A64])) "a.c":37:28 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 82 [ _1 ])
+            (reg:DI 83 [ _2 ]))) "a.c":37:8 12 {*cmpdi_1}
+     (nil))
+(jump_insn 14 13 15 2 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 19)
+            (pc))) "a.c":37:8 806 {*jcc}
+     (nil)
+ -> 19)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 15 14 16 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 16 15 17 3 (set (reg:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":38:9 74 {*movdi_internal}
+     (nil))
+(insn 17 16 18 3 (set (reg:DI 5 di)
+        (reg:DI 93)) "a.c":38:9 74 {*movdi_internal}
+     (nil))
+(call_insn 18 17 19 3 (call (mem:QI (symbol_ref:DI ("resize") [flags 0x3]  <function_decl 0x7fa9f27c4200 resize>) [0 resize S1 A8])
+        (const_int 0 [0])) "a.c":38:9 813 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+;;              3 (FALLTHRU)
+(code_label 19 18 20 4 7 (nil) [1 uses])
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 4 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":40:10 74 {*movdi_internal}
+     (nil))
+(insn 22 21 23 4 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (reg/f:DI 94) [3 stack_10(D)->data+0 S8 A64])) "a.c":40:10 74 {*movdi_internal}
+     (nil))
+(insn 23 22 24 4 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":40:22 74 {*movdi_internal}
+     (nil))
+(insn 24 23 25 4 (set (reg:DI 85 [ _4 ])
+        (mem:DI (plus:DI (reg/f:DI 95)
+                (const_int 16 [0x10])) [4 stack_10(D)->top+0 S8 A64])) "a.c":40:22 74 {*movdi_internal}
+     (nil))
+(insn 25 24 26 4 (parallel [
+            (set (reg/f:DI 86 [ _5 ])
+                (plus:DI (reg/f:DI 84 [ _3 ])
+                    (reg:DI 85 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":40:16 210 {*adddi_1}
+     (nil))
+(insn 26 25 27 4 (set (reg:QI 96)
+        (mem/c:QI (plus:DI (reg/f:DI 19 frame)
+                (const_int -12 [0xfffffffffffffff4])) [0 value+0 S1 A32])) "a.c":40:29 77 {*movqi_internal}
+     (nil))
+(insn 27 26 28 4 (set (mem:QI (reg/f:DI 86 [ _5 ]) [0 *_5+0 S1 A8])
+        (reg:QI 96)) "a.c":40:29 77 {*movqi_internal}
+     (nil))
+(insn 28 27 29 4 (set (reg/f:DI 97)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":41:10 74 {*movdi_internal}
+     (nil))
+(insn 29 28 30 4 (set (reg:DI 87 [ _6 ])
+        (mem:DI (plus:DI (reg/f:DI 97)
+                (const_int 16 [0x10])) [4 stack_10(D)->top+0 S8 A64])) "a.c":41:10 74 {*movdi_internal}
+     (nil))
+(insn 30 29 31 4 (parallel [
+            (set (reg:DI 88 [ _7 ])
+                (plus:DI (reg:DI 87 [ _6 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":41:15 210 {*adddi_1}
+     (nil))
+(insn 31 30 32 4 (set (reg/f:DI 98)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":41:15 74 {*movdi_internal}
+     (nil))
+(insn 32 31 35 4 (set (mem:DI (plus:DI (reg/f:DI 98)
+                (const_int 16 [0x10])) [4 stack_10(D)->top+0 S8 A64])
+        (reg:DI 88 [ _7 ])) "a.c":41:15 74 {*movdi_internal}
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 1, flags: (NEW, RTL)
+;;  pred:       4 [always]  (FALLTHRU)
+(note 35 32 36 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 36 35 0 5 (const_int 0 [0]) "a.c":42:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function pop (pop, funcdef_no=10, decl_uid=3061, cgraph_uid=11, symbol_order=10)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":45:26 74 {*movdi_internal}
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 3 10 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":49:10 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 16 [0x10])) [4 stack_8(D)->top+0 S8 A64])) "a.c":49:10 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 84 [ _3 ])
+                (plus:DI (reg:DI 83 [ _2 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":49:15 210 {*adddi_1}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":49:15 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (mem:DI (plus:DI (reg/f:DI 92)
+                (const_int 16 [0x10])) [4 stack_8(D)->top+0 S8 A64])
+        (reg:DI 84 [ _3 ])) "a.c":49:15 74 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":50:17 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (reg/f:DI 93) [3 stack_8(D)->data+0 S8 A64])) "a.c":50:17 74 {*movdi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":50:29 74 {*movdi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 86 [ _5 ])
+        (mem:DI (plus:DI (reg/f:DI 94)
+                (const_int 16 [0x10])) [4 stack_8(D)->top+0 S8 A64])) "a.c":50:29 74 {*movdi_internal}
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 85 [ _4 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":50:23 210 {*adddi_1}
+     (nil))
+(insn 19 18 22 2 (set (reg:QI 88 [ _10 ])
+        (mem:QI (reg/f:DI 87 [ _6 ]) [0 *_6+0 S1 A8])) "a.c":50:23 77 {*movqi_internal}
+     (nil))
+(insn 22 19 26 2 (set (reg:QI 89 [ <retval> ])
+        (reg:QI 88 [ _10 ])) "a.c":50:23 77 {*movqi_internal}
+     (nil))
+(insn 26 22 27 2 (set (reg/i:QI 0 ax)
+        (reg:QI 89 [ <retval> ])) "a.c":51:1 77 {*movqi_internal}
+     (nil))
+(insn 27 26 0 2 (use (reg/i:QI 0 ax)) "a.c":51:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function peek (peek, funcdef_no=11, decl_uid=3063, cgraph_uid=12, symbol_order=11)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":52:33 74 {*movdi_internal}
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 3 10 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":56:17 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (reg/f:DI 90) [3 stack_7(D)->data+0 S8 A64])) "a.c":56:17 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 stack+0 S8 A64])) "a.c":56:29 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 16 [0x10])) [4 stack_7(D)->top+0 S8 A64])) "a.c":56:29 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (plus:DI (reg:DI 84 [ _3 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":56:23 210 {*adddi_1}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg/f:DI 86 [ _5 ])
+                (plus:DI (reg/f:DI 83 [ _2 ])
+                    (reg:DI 85 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":56:23 210 {*adddi_1}
+     (nil))
+(insn 15 14 18 2 (set (reg:QI 87 [ _8 ])
+        (mem:QI (reg/f:DI 86 [ _5 ]) [0 *_5+0 S1 A8])) "a.c":56:23 77 {*movqi_internal}
+     (nil))
+(insn 18 15 22 2 (set (reg:QI 88 [ <retval> ])
+        (reg:QI 87 [ _8 ])) "a.c":56:23 77 {*movqi_internal}
+     (nil))
+(insn 22 18 23 2 (set (reg/i:QI 0 ax)
+        (reg:QI 88 [ <retval> ])) "a.c":57:1 77 {*movqi_internal}
+     (nil))
+(insn 23 22 0 2 (use (reg/i:QI 0 ax)) "a.c":57:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function createFStack (createFStack, funcdef_no=12, decl_uid=3071, cgraph_uid=13, symbol_order=12)
+
+Reordered sequence:
+ 2 bb 2
+ 3 bb 3
+ 4 bb 4
+(note 1 0 3 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])
+        (const_int 0 [0])) "a.c":64:14 74 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (const_int 24 [0x18])) "a.c":65:11 74 {*movdi_internal}
+     (nil))
+(call_insn 7 6 8 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fa9f2ad4800 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "a.c":65:11 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 88)
+        (reg:DI 0 ax)) "a.c":65:11 74 {*movdi_internal}
+     (expr_list:REG_NOALIAS (reg/f:DI 88)
+        (nil)))
+(insn 9 8 11 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])
+        (reg/f:DI 88)) "a.c":65:11 74 {*movdi_internal}
+     (nil))
+(insn 11 9 12 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":69:15 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (mem:DI (plus:DI (reg/f:DI 89)
+                (const_int 8 [0x8])) [4 out_9->size+0 S8 A64])
+        (const_int 10 [0xa])) "a.c":69:15 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":70:27 74 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 90)
+                (const_int 8 [0x8])) [4 out_9->size+0 S8 A64])) "a.c":70:27 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg:DI 83 [ _2 ])
+                (ashift:DI (reg:DI 82 [ _1 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":70:17 656 {*ashldi3_1}
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 5 di)
+        (reg:DI 83 [ _2 ])) "a.c":70:17 74 {*movdi_internal}
+     (nil))
+(call_insn 17 16 18 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7fa9f2ad4800 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "a.c":70:17 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 18 17 19 2 (set (reg/f:DI 91)
+        (reg:DI 0 ax)) "a.c":70:17 74 {*movdi_internal}
+     (expr_list:REG_NOALIAS (reg/f:DI 91)
+        (nil)))
+(insn 19 18 20 2 (set (reg/f:DI 84 [ _3 ])
+        (reg/f:DI 91)) "a.c":70:17 74 {*movdi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":70:15 74 {*movdi_internal}
+     (nil))
+(insn 21 20 22 2 (set (mem/f:DI (reg/f:DI 92) [8 out_9->data+0 S8 A64])
+        (reg/f:DI 84 [ _3 ])) "a.c":70:15 74 {*movdi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":71:12 74 {*movdi_internal}
+     (nil))
+(insn 23 22 24 2 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (reg/f:DI 93) [8 out_9->data+0 S8 A64])) "a.c":71:12 74 {*movdi_internal}
+     (nil))
+(insn 24 23 25 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/f:DI 85 [ _4 ])
+            (const_int 0 [0]))) "a.c":71:8 8 {*cmpdi_ccno_1}
+     (nil))
+(jump_insn 25 24 26 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 30)
+            (pc))) "a.c":71:8 806 {*jcc}
+     (nil)
+ -> 30)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 26 25 27 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 3 (set (reg:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":72:9 74 {*movdi_internal}
+     (nil))
+(insn 28 27 29 3 (set (reg:DI 5 di)
+        (reg:DI 94)) "a.c":72:9 74 {*movdi_internal}
+     (nil))
+(call_insn 29 28 30 3 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":72:9 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+;;              3 (FALLTHRU)
+(code_label 30 29 31 4 13 (nil) [1 uses])
+(note 31 30 32 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 4 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":75:14 74 {*movdi_internal}
+     (nil))
+(insn 33 32 34 4 (set (mem:DI (plus:DI (reg/f:DI 95)
+                (const_int 16 [0x10])) [4 out_9->top+0 S8 A64])
+        (const_int 0 [0])) "a.c":75:14 74 {*movdi_internal}
+     (nil))
+(insn 34 33 37 4 (set (reg/f:DI 86 [ _15 ])
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 out+0 S8 A64])) "a.c":76:12 74 {*movdi_internal}
+     (nil))
+(insn 37 34 41 4 (set (reg/f:DI 87 [ <retval> ])
+        (reg/f:DI 86 [ _15 ])) "a.c":76:12 74 {*movdi_internal}
+     (nil))
+(insn 41 37 42 4 (set (reg/i:DI 0 ax)
+        (reg/f:DI 87 [ <retval> ])) "a.c":77:1 74 {*movdi_internal}
+     (nil))
+(insn 42 41 0 4 (use (reg/i:DI 0 ax)) "a.c":77:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function deleteFStack (deleteFStack, funcdef_no=13, decl_uid=3070, cgraph_uid=14, symbol_order=13)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [9 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":79:36 74 {*movdi_internal}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 85)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [9 stack+0 S8 A64])) "a.c":80:11 74 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg/f:DI 82 [ _1 ])
+        (mem/f:DI (reg/f:DI 85) [6 *stack_5(D)+0 S8 A64])) "a.c":80:11 74 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (reg/f:DI 82 [ _1 ]) [8 _1->data+0 S8 A64])) "a.c":80:18 74 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg/f:DI 83 [ _2 ])) "a.c":80:5 74 {*movdi_internal}
+     (nil))
+(call_insn 10 9 11 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":80:5 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 11 10 12 2 (set (reg/f:DI 86)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [9 stack+0 S8 A64])) "a.c":81:5 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (reg/f:DI 86) [6 *stack_5(D)+0 S8 A64])) "a.c":81:5 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 5 di)
+        (reg/f:DI 84 [ _3 ])) "a.c":81:5 74 {*movdi_internal}
+     (nil))
+(call_insn 14 13 15 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x7fa9f2acdd00 free>) [0 __builtin_free S1 A8])
+        (const_int 0 [0])) "a.c":81:5 813 {*call}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 15 14 16 2 (set (reg/f:DI 87)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [9 stack+0 S8 A64])) "a.c":82:12 74 {*movdi_internal}
+     (nil))
+(insn 16 15 19 2 (set (mem/f:DI (reg/f:DI 87) [6 *stack_5(D)+0 S8 A64])
+        (const_int 0 [0])) "a.c":82:12 74 {*movdi_internal}
+     (nil))
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 1, flags: (NEW, RTL)
+;;  pred:       2 [always]  (FALLTHRU)
+(note 19 16 20 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 0 3 (const_int 0 [0]) "a.c":83:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function Fresize (Fresize, funcdef_no=14, decl_uid=3073, cgraph_uid=15, symbol_order=14)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":86:30 74 {*movdi_internal}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg/f:DI 89)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":87:17 74 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 89)
+                (const_int 8 [0x8])) [4 stack_9(D)->size+0 S8 A64])) "a.c":87:17 74 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:DI 83 [ _2 ])
+                (plus:DI (reg:DI 82 [ _1 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":87:17 210 {*adddi_1}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":87:17 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (mem:DI (plus:DI (reg/f:DI 90)
+                (const_int 8 [0x8])) [4 stack_9(D)->size+0 S8 A64])
+        (reg:DI 83 [ _2 ])) "a.c":87:17 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":88:45 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 8 [0x8])) [4 stack_9(D)->size+0 S8 A64])) "a.c":88:45 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (ashift:DI (reg:DI 84 [ _3 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":88:19 656 {*ashldi3_1}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":88:32 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 86 [ _5 ])
+        (mem/f:DI (reg/f:DI 92) [8 stack_9(D)->data+0 S8 A64])) "a.c":88:32 74 {*movdi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 4 si)
+        (reg:DI 85 [ _4 ])) "a.c":88:19 74 {*movdi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 5 di)
+        (reg/f:DI 86 [ _5 ])) "a.c":88:19 74 {*movdi_internal}
+     (nil))
+(call_insn 18 17 19 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("realloc") [flags 0x41]  <function_decl 0x7fa9f2ad7600 realloc>) [0 __builtin_realloc S1 A8])
+            (const_int 0 [0]))) "a.c":88:19 824 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (nil))))
+(insn 19 18 20 2 (set (reg/f:DI 87 [ _6 ])
+        (reg:DI 0 ax)) "a.c":88:19 74 {*movdi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":88:17 74 {*movdi_internal}
+     (nil))
+(insn 21 20 27 2 (set (mem/f:DI (reg/f:DI 93) [8 stack_9(D)->data+0 S8 A64])
+        (reg/f:DI 87 [ _6 ])) "a.c":88:17 74 {*movdi_internal}
+     (nil))
+(insn 27 21 0 2 (const_int 0 [0]) "a.c":92:1 843 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function Fpush (Fpush, funcdef_no=15, decl_uid=3076, cgraph_uid=16, symbol_order=15)
+
+Reordered sequence:
+ 2 bb 2
+ 3 bb 3
+ 4 bb 4
+(note 1 0 5 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":94:42 74 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:DF (plus:DI (reg/f:DI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [10 value+0 S8 A64])
+        (reg:DF 20 xmm0 [ value ])) "a.c":94:42 135 {*movdf_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 90)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":95:14 74 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 82 [ _1 ])
+        (mem:DI (plus:DI (reg/f:DI 90)
+                (const_int 16 [0x10])) [4 stack_11(D)->top+0 S8 A64])) "a.c":95:14 74 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":95:28 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 91)
+                (const_int 8 [0x8])) [4 stack_11(D)->size+0 S8 A64])) "a.c":95:28 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:CC 17 flags)
+        (compare:CC (reg:DI 82 [ _1 ])
+            (reg:DI 83 [ _2 ]))) "a.c":95:8 12 {*cmpdi_1}
+     (nil))
+(jump_insn 12 11 13 2 (set (pc)
+        (if_then_else (ltu (reg:CC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) "a.c":95:8 806 {*jcc}
+     (nil)
+ -> 17)
+;;  succ:       3 (FALLTHRU)
+;;              4
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+(note 13 12 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 3 (set (reg:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":96:9 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 3 (set (reg:DI 5 di)
+        (reg:DI 92)) "a.c":96:9 74 {*movdi_internal}
+     (nil))
+(call_insn 16 15 17 3 (call (mem:QI (symbol_ref:DI ("Fresize") [flags 0x3]  <function_decl 0x7fa9f27c4800 Fresize>) [0 Fresize S1 A8])
+        (const_int 0 [0])) "a.c":96:9 813 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+;;              3 (FALLTHRU)
+(code_label 17 16 18 4 18 (nil) [1 uses])
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":98:10 74 {*movdi_internal}
+     (nil))
+(insn 20 19 21 4 (set (reg/f:DI 84 [ _3 ])
+        (mem/f:DI (reg/f:DI 93) [8 stack_11(D)->data+0 S8 A64])) "a.c":98:10 74 {*movdi_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":98:22 74 {*movdi_internal}
+     (nil))
+(insn 22 21 23 4 (set (reg:DI 85 [ _4 ])
+        (mem:DI (plus:DI (reg/f:DI 94)
+                (const_int 16 [0x10])) [4 stack_11(D)->top+0 S8 A64])) "a.c":98:22 74 {*movdi_internal}
+     (nil))
+(insn 23 22 24 4 (parallel [
+            (set (reg:DI 86 [ _5 ])
+                (ashift:DI (reg:DI 85 [ _4 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":98:16 656 {*ashldi3_1}
+     (nil))
+(insn 24 23 25 4 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 84 [ _3 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":98:16 210 {*adddi_1}
+     (nil))
+(insn 25 24 26 4 (set (reg:DF 95)
+        (mem/c:DF (plus:DI (reg/f:DI 19 frame)
+                (const_int -16 [0xfffffffffffffff0])) [10 value+0 S8 A64])) "a.c":98:29 135 {*movdf_internal}
+     (nil))
+(insn 26 25 27 4 (set (mem:DF (reg/f:DI 87 [ _6 ]) [10 *_6+0 S8 A64])
+        (reg:DF 95)) "a.c":98:29 135 {*movdf_internal}
+     (nil))
+(insn 27 26 28 4 (set (reg/f:DI 96)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":99:10 74 {*movdi_internal}
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 88 [ _7 ])
+        (mem:DI (plus:DI (reg/f:DI 96)
+                (const_int 16 [0x10])) [4 stack_11(D)->top+0 S8 A64])) "a.c":99:10 74 {*movdi_internal}
+     (nil))
+(insn 29 28 30 4 (parallel [
+            (set (reg:DI 89 [ _8 ])
+                (plus:DI (reg:DI 88 [ _7 ])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":99:15 210 {*adddi_1}
+     (nil))
+(insn 30 29 31 4 (set (reg/f:DI 97)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":99:15 74 {*movdi_internal}
+     (nil))
+(insn 31 30 34 4 (set (mem:DI (plus:DI (reg/f:DI 97)
+                (const_int 16 [0x10])) [4 stack_11(D)->top+0 S8 A64])
+        (reg:DI 89 [ _8 ])) "a.c":99:15 74 {*movdi_internal}
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 1, flags: (NEW, RTL)
+;;  pred:       4 [always]  (FALLTHRU)
+(note 34 31 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 0 5 (const_int 0 [0]) "a.c":100:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function Fpop (Fpop, funcdef_no=16, decl_uid=3078, cgraph_uid=17, symbol_order=16)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":103:29 74 {*movdi_internal}
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 3 10 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":107:10 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 83 [ _2 ])
+        (mem:DI (plus:DI (reg/f:DI 92)
+                (const_int 16 [0x10])) [4 stack_9(D)->top+0 S8 A64])) "a.c":107:10 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (parallel [
+            (set (reg:DI 84 [ _3 ])
+                (plus:DI (reg:DI 83 [ _2 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":107:15 210 {*adddi_1}
+     (nil))
+(insn 12 11 13 2 (set (reg/f:DI 93)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":107:15 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (mem:DI (plus:DI (reg/f:DI 93)
+                (const_int 16 [0x10])) [4 stack_9(D)->top+0 S8 A64])
+        (reg:DI 84 [ _3 ])) "a.c":107:15 74 {*movdi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg/f:DI 94)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":108:17 74 {*movdi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:DI 85 [ _4 ])
+        (mem/f:DI (reg/f:DI 94) [8 stack_9(D)->data+0 S8 A64])) "a.c":108:17 74 {*movdi_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":108:29 74 {*movdi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 86 [ _5 ])
+        (mem:DI (plus:DI (reg/f:DI 95)
+                (const_int 16 [0x10])) [4 stack_9(D)->top+0 S8 A64])) "a.c":108:29 74 {*movdi_internal}
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg:DI 87 [ _6 ])
+                (ashift:DI (reg:DI 86 [ _5 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":108:23 656 {*ashldi3_1}
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (set (reg/f:DI 88 [ _7 ])
+                (plus:DI (reg/f:DI 85 [ _4 ])
+                    (reg:DI 87 [ _6 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":108:23 210 {*adddi_1}
+     (nil))
+(insn 20 19 23 2 (set (reg:DF 89 [ _11 ])
+        (mem:DF (reg/f:DI 88 [ _7 ]) [10 *_7+0 S8 A64])) "a.c":108:23 135 {*movdf_internal}
+     (nil))
+(insn 23 20 27 2 (set (reg:DF 90 [ <retval> ])
+        (reg:DF 89 [ _11 ])) "a.c":108:23 135 {*movdf_internal}
+     (nil))
+(insn 27 23 28 2 (set (reg/i:DF 20 xmm0)
+        (reg:DF 90 [ <retval> ])) "a.c":109:1 135 {*movdf_internal}
+     (nil))
+(insn 28 27 0 2 (use (reg/i:DF 20 xmm0)) "a.c":109:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
+
+;; Function Fpeek (Fpeek, funcdef_no=17, decl_uid=3080, cgraph_uid=18, symbol_order=17)
+
+Reordered sequence:
+ 2 bb 2
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])
+        (reg:DI 5 di [ stack ])) "a.c":110:36 74 {*movdi_internal}
+     (nil))
+(note 3 2 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 3 10 2 (set (reg/f:DI 91)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":114:17 74 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 83 [ _2 ])
+        (mem/f:DI (reg/f:DI 91) [8 stack_8(D)->data+0 S8 A64])) "a.c":114:17 74 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:DI 92)
+        (mem/f/c:DI (plus:DI (reg/f:DI 19 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 stack+0 S8 A64])) "a.c":114:29 74 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 84 [ _3 ])
+        (mem:DI (plus:DI (reg/f:DI 92)
+                (const_int 16 [0x10])) [4 stack_8(D)->top+0 S8 A64])) "a.c":114:29 74 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:DI 85 [ _4 ])
+                (ashift:DI (reg:DI 84 [ _3 ])
+                    (const_int 3 [0x3])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":114:23 656 {*ashldi3_1}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:DI 86 [ _5 ])
+                (plus:DI (reg:DI 85 [ _4 ])
+                    (const_int -8 [0xfffffffffffffff8])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":114:23 210 {*adddi_1}
+     (nil))
+(insn 15 14 16 2 (parallel [
+            (set (reg/f:DI 87 [ _6 ])
+                (plus:DI (reg/f:DI 83 [ _2 ])
+                    (reg:DI 86 [ _5 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "a.c":114:23 210 {*adddi_1}
+     (nil))
+(insn 16 15 19 2 (set (reg:DF 88 [ _9 ])
+        (mem:DF (reg/f:DI 87 [ _6 ]) [10 *_6+0 S8 A64])) "a.c":114:23 135 {*movdf_internal}
+     (nil))
+(insn 19 16 23 2 (set (reg:DF 89 [ <retval> ])
+        (reg:DF 88 [ _9 ])) "a.c":114:23 135 {*movdf_internal}
+     (nil))
+(insn 23 19 24 2 (set (reg/i:DF 20 xmm0)
+        (reg:DF 89 [ <retval> ])) "a.c":115:1 135 {*movdf_internal}
+     (nil))
+(insn 24 23 0 2 (use (reg/i:DF 20 xmm0)) "a.c":115:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
