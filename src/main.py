@@ -177,7 +177,7 @@ class Window_credit(QtWidgets.QDialog):
             self.text_res_month.setText("в файле")
             self.text_res_month.repaint()
 
-            os.system("result.txt")
+            os.system("open result.txt")
 
 
 class Window(QMainWindow):
@@ -322,8 +322,6 @@ if __name__ == '__main__':
     #subprocess.run(["gcc","-dynamiclib","a.c","calc.c","-lm", "-o", "main.dylib",], check=True,)
     execute = ctypes.cdll.LoadLibrary(f"{pwd}/main.dylib")
     # execute = ctypes.cdll.LoadLibrary(f"{pwd}\\main.dll")
-    # execute.say_fuck()
-    # print(execute.what_the_func(bytes("cos", encoding='ASCII')))
     app = QApplication(sys.argv)
     Win = Window()
     app.exec_()
